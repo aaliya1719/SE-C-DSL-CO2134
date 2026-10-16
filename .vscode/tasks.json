@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build pract1.c",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-std=c11",
+                "-Wall",
+                "-Wextra",
+                "-pedantic",
+                "${workspaceFolder}/pract1.c",
+                "-o",
+                "${workspaceFolder}/pract1"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "windows": {
+                "command": "gcc",
+                "args": [
+                    "-std=c11",
+                    "-Wall",
+                    "-Wextra",
+                    "-pedantic",
+                    "${workspaceFolder}/pract1.c",
+                    "-o",
+                    "${workspaceFolder}/pract1.exe"
+                ]
+            }
+        }
+    ]
+}
