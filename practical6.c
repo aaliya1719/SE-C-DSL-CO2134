@@ -47,6 +47,18 @@ struct Node *search(struct Node *root, int roll)
     return search(root->right, roll);
 }
 
+/* struct Node *search(struct Node *root, int roll)
+{
+    if (root == NULL || root->roll == roll)
+        return root;
+
+    else if (roll < root->roll)
+        return search(root->left, roll);
+
+    else
+        return search(root->right, roll);
+} */
+
 struct Node *findMin(struct Node *root)
 {
     while (root != NULL && root->left != NULL)
