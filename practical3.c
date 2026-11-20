@@ -38,7 +38,8 @@ void insertEnd() {
     newNode->next = NULL;
     if (head == NULL) {
         head = newNode;
-    } else {
+    } 
+    else {
         temp = head;
         while (temp->next != NULL) {
             temp = temp->next;
@@ -63,7 +64,8 @@ void deleteContact() {
         if (strcmp(temp->name, name) == 0) {
             if (prev == NULL) {
                 head = temp->next;
-            } else {
+            } 
+            else {
                 prev->next = temp->next;
             }
 
