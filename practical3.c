@@ -22,6 +22,7 @@ void insertBeginning() {
 
     newNode->next = head;
     head = newNode;
+    
     printf("Contact added successfully!\n");
 }
 
@@ -36,6 +37,7 @@ void insertEnd() {
     scanf("%s", newNode->phone);
 
     newNode->next = NULL;
+
     if (head == NULL) {
         head = newNode;
     } 
