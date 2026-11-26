@@ -13,8 +13,8 @@ struct Contact *head = NULL;
 // Insert at beginning
 void insertBeginning() {
     struct Contact *newNode;
-
     newNode = (struct Contact *)malloc(sizeof(struct Contact));
+
     printf("Enter name: ");
     scanf("%s", newNode->name);
     printf("Enter phone number: ");
@@ -29,8 +29,8 @@ void insertBeginning() {
 // Insert at end
 void insertEnd() {
     struct Contact *newNode, *temp;
-
     newNode = (struct Contact *)malloc(sizeof(struct Contact));
+
     printf("Enter name: ");
     scanf("%s", newNode->name);
     printf("Enter phone number: ");
@@ -46,6 +46,7 @@ void insertEnd() {
         while (temp->next != NULL) {
             temp = temp->next;
         }
+
         temp->next = newNode;
     }
 
@@ -59,6 +60,7 @@ void deleteContact() {
 
     printf("Enter name to delete: ");
     scanf("%s", name);
+
     temp = head;
     prev = NULL;
 
@@ -90,9 +92,11 @@ void searchContact() {
 
     printf("Enter name to search: ");
     scanf("%s", name);
+
     temp = head;
 
     while (temp != NULL) {
+
         if (strcmp(temp->name, name) == 0) {
             printf("Contact Found!\n");
             printf("Name  : %s\n", temp->name);
@@ -116,11 +120,14 @@ void displayContacts() {
     }
 
     temp = head;
+
     printf("\n--- Contact List ---\n");
+
     while (temp != NULL) {
         printf("Name  : %s\n", temp->name);
         printf("Phone : %s\n", temp->phone);
         printf("-------------------\n");
+        
         temp = temp->next;
     }
 }
